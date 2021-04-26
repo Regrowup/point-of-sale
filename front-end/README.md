@@ -1,6 +1,6 @@
 # PoS frontend
 
-This is a [ReactJS](https://facebook.github.io/react/) [SPA](https://en.wikipedia.org/wiki/Single-page_application), using [React Router](https://github.com/ReactTraining/react-router) for URL management and [Redux](https://github.com/reduxjs/react-redux) for state management. The backend (API) for this application lives in another folder: https://github.com/chipit24/point-of-sale/back-end.
+This is a [ReactJS](https://facebook.github.io/react/) [SPA](https://en.wikipedia.org/wiki/Single-page_application), using [React Router](https://github.com/ReactTraining/react-router) for URL management and [Redux](https://github.com/reduxjs/react-redux) for state management. The backend (API) for this application lives in another folder: https://github.com/chipit24/point-of-sale/tree/main/front-end.
 
  - [Getting started](#getting-started)
  - [Running E2E tests](#running-e2e-tests)

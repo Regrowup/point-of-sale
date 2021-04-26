@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  pos-api:
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+    container_name: pos-api
+    depends_on:
+      - pos-db
+    volumes:
+      - ./:/var/www/html:delegated
+
+  pos-db:
+    image: ${DOCKER_DB_IMAGE}
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+    container_name: pos-db
+    volumes:
+      - ../pos-db-data:/var/lib/mysql:cached
