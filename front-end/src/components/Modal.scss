@@ -1,0 +1,77 @@
+.Modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  align-items: safe center;
+  justify-content: safe center;
+  top: 0;
+  left: 0;
+  overflow: auto;
+
+  .backdrop {
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.18);
+  }
+
+  .modal {
+    background-color: #fff;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.06);
+    min-width: 350px;
+    width: min-content;
+    z-index: 100;
+    padding: 20px;
+    margin: auto;
+
+    .title {
+      margin: 0;
+      font-size: 20px;
+      font-family: "Open Sans", sans-serif;;
+      font-weight: 300;
+      padding: 20px;
+      margin: -20px;
+      background-color: rgba(240, 248, 255, 0.84);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 65px;
+    }
+
+    .content {
+      margin: 10px 0;
+
+      > div { width: 100%; }
+    }
+
+    .buttons-container {
+      background-color: rgba(240, 248, 255, 0.84);
+      padding: 20px;
+      margin: -20px;
+      margin-top: 20px;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > .buttons {
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        > .ok-button {
+          margin-left: auto;
+        }
+
+        > .cancel-button {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

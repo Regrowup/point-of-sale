@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/preset-env", {
+      "modules": false,
+      "exclude": ["transform-regenerator"]
+    }]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-proposal-class-properties",
+    "babel-plugin-styled-components",
+    "react-hot-loader/babel"
+  ]
+}

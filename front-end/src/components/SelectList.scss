@@ -1,0 +1,16 @@
+@import './variables';
+
+.SelectList-container {
+  margin-bottom: 10px;
+
+  .select-item {
+    justify-content: flex-start;
+    width: 100%;
+
+    &.selected {
+      background-color: $yellow-light;
+      justify-content: space-between;
+      z-index: 1;
+    }
+  }
+}

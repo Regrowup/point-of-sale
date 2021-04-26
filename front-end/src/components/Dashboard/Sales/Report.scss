@@ -1,0 +1,139 @@
+@import '../../variables';
+
+.Report-container {
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+
+  > .totals {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .total {
+      position: relative;
+      font-size: 1.25rem;
+      color: $dark-grey;
+      flex-shrink: 0;
+      margin: 1rem 1rem 0;
+    }
+
+    > .total > .value {
+      margin-left: 0.5rem;
+      padding: 5px 10px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      font-weight: 300;
+      display: inline-block;
+    }
+
+    > .total > .total-hint {
+      cursor: help;
+      position: absolute;
+      font-size: 1.25rem;
+      color: #0000cc;
+      right: -0.5rem;
+      top: -0.5rem;
+    }
+  }
+
+  > .rows {
+    margin-bottom: 30px;
+
+    > .row_wrapper {
+      padding: 3px 3px 0;
+      background-color: snow;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+
+      &:last-child { padding-bottom: 3px; }
+    }
+
+    > .row_wrapper > .row {
+      height: 60px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      width: 100%;
+    }
+
+    > .row_wrapper > .row > .tag {
+      border: 1px solid;
+      border-radius: 10px;
+      padding: 0 6px;
+      margin-right: 16px;
+
+      &.-price {
+        color: $blue;
+        border-color: $blue;
+      }
+
+      &.-voided {
+        color: $red;
+        border-color: $red;
+      }
+    }
+
+    > .row_wrapper > .row > .datum {
+      &:not(:last-of-type) { margin-right: 16px; }
+      &.-date { min-width: 200px; }
+      &.-first_date { margin-left: auto; }
+
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      font-size: 14px;
+      font-family: 'Open Sans', sans-serif;
+
+      > .label { font-weight: 300; }
+    }
+  }
+
+  > .no_results {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    opacity: .4;
+  }
+
+  > .pagination {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 30px;
+
+    > .previous {
+      margin-right: auto;
+      cursor: pointer;
+    }
+
+    > .next {
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+    > .disabled {
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    > .active > .page_link {
+      pointer-events: none;
+      font-weight: bold;
+      border-bottom: 2px solid #ff4081;
+    }
+
+    > li:not(.active) > .page_link { cursor: pointer; }
+
+    > li > .page_link {
+      padding: 10px;
+      margin: 5px;
+    }
+  }
+}

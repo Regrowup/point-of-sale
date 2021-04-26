@@ -1,0 +1,44 @@
+@import '../../variables';
+
+.date-selector {
+  > .display {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > .display > .arrow {
+    margin: 0 8px;
+    font-size: 16px;
+    color: #666;
+  }
+
+  > .display > .dropdown {
+    margin-left: 10px;
+    font-weight: 600;
+    color: $blue-trim;
+  }
+
+  > .date_range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 565px;
+    top: 44px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    transition: all 200ms;
+
+    &.-hidden {
+      top: 30px;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+/node_modules
+/dist
+**/.DS_store
+.env*
+!.env.defaults
+.vscode
+**/npm-debug.log
+
+out/

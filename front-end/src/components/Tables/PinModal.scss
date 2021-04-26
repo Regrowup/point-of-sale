@@ -1,0 +1,42 @@
+.PinModal-container {
+  .pin-display {
+    display: flex;
+    
+    .circle {
+      margin: 0 5px;
+      width: 15px;
+      height: 15px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      
+      &.filled { background-color: #000; }
+    }
+  }
+  
+  .pin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px 30px;
+    position: relative;
+
+    > input {
+      border: none;
+      font-size: 50px;
+      width: 150px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .clear-pin {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

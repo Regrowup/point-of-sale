@@ -1,0 +1,43 @@
+$button_size: 65px;
+$button_padding: 10px;
+$button_columns: 3;
+
+.PinButtons {
+  width: $button_size*$button_columns + ($button_padding*2)*$button_columns;
+  text-align: center;
+  margin: auto;
+}
+
+.PinButton {
+  user-select: none;
+  display: inline-flex;
+  border: 1px solid #d4d4d4;
+  border-radius: 50%;
+  width: $button_size;
+  height: $button_size;
+  font-size: 35px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  margin: 5px $button_padding;
+  cursor: pointer;
+  color: #545454;
+  box-shadow: inset 1px 1px 1px 1px #f1f1f1;
+  
+  &:hover {
+    background-color: #ededf1;
+    box-shadow: inset 3px 3px 1px 1px #e8e8e8;
+  }
+  
+  &.animate {
+    animation-duration: 500ms;
+    animation-name: fadeBackground;
+  }
+}
+
+@keyframes fadeBackground {
+  from {
+    background-color: #b1b1d0;
+    box-shadow: inset 3px 3px 1px 1px #b1b1d0;
+  }
+}
